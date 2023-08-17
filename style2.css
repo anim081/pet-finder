@@ -286,3 +286,7 @@ button:hover {
 .adopt-button:hover {
   background-color: #c0392b;
 }
+
+.petfinderlink {
+  text-decoration: underline;
+}

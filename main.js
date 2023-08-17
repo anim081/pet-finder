@@ -9,3 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const getStartedLink = document.getElementById("get-started-link");
+
+  if (getStartedLink) {
+    getStartedLink.addEventListener("click", () => {
+      window.location.href = "findapet.html";
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const getPetLink = document.getElementById("findapetlink");
+
+  if (getPetLink) {
+    getPetLink.addEventListener("click", () => {
+      window.location.href = "findapet.html";
+    });
+  }
+});

@@ -44,10 +44,13 @@ async function fetchAndDisplayPets(location, animalType) {
             <img src="${pet.photos[0].medium}" alt="${pet.name}">
           </div>
           <div class="pet-info">
-            <h2>${pet.name}</h2>
+            <h2><a href="${pet.url}" target="_blank">${pet.name}</a></h2>
             <h4>${pet.contact.email}</h4>
-            <h3>${pet.contact.phone}</h3>
         `;
+
+        if (pet.contact.phone) {
+          petInfoHtml += `<h3>${pet.contact.phone}</h3>`;
+        }
 
         if (pet.description) {
           petInfoHtml += `<p>${pet.description}</p>`;
