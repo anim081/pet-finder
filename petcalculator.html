@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Calculator</title>
+    <link rel="stylesheet" href="style3.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pet Budget Calculator</h1>
+      <label for="petType">Pet Type:</label>
+      <select id="petType">
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="rabbit">Rabbit</option>
+      </select>
+      <label for="petSize">Pet Size:</label>
+      <select id="petSize">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+      <label for="petBreed">Pet Breed:</label>
+      <img id="images" src="images/proper-logo.png" />
+      <br />
+      <input type="text" id="petBreed" placeholder="Enter pet breed" />
+      <label for="petExpenses">Monthly Pet Expenses ($):</label>
+      <input type="number" id="petExpenses" placeholder="Enter pet expenses" />
+      <button id="calculateButton">Calculate Total Budget</button>
+      <div id="result"></div>
+    </div>
+
+    <script src="script3.js"></script>
+  </body>
+</html>
