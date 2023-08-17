@@ -20,7 +20,7 @@ async function fetchAndDisplayPets(location, animalType) {
   try {
     const accessToken = await fetchAccessToken();
     const response = await fetch(
-      `${url}?type=${animalType}&location=${location}&limit=10`,
+      `${url}?type=${animalType}&location=${location}&limit=100`,
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -45,6 +45,8 @@ async function fetchAndDisplayPets(location, animalType) {
           </div>
           <div class="pet-info">
             <h2>${pet.name}</h2>
+            <h4>${pet.contact.email}</h4>
+            <h3>${pet.contact.phone}</h3>
         `;
 
         if (pet.description) {
@@ -70,8 +72,6 @@ async function fetchAndDisplayPets(location, animalType) {
         if (pet.tags && pet.tags.length > 0) {
           petInfoHtml += `<p>Tags: ${pet.tags.join(", ")}</p>`;
         }
-
-        petInfoHtml += `<button class="adopt-button">Adopt Me</button></div>`;
 
         petCard.innerHTML = petInfoHtml;
 
