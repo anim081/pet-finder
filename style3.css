@@ -7,6 +7,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/003/031/764/original/blue-wide-background-with-linear-blurred-gradient-free-vector.jpg");
+  backdrop-filter: blur(10px);
+  background-size: cover;
 }
 
 .container {
