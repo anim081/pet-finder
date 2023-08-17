@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (getStartedButton) {
     getStartedButton.addEventListener("click", () => {
-      window.location.href = "pages/petfinder/findapet.html";
+      window.location.href = "findapet.html";
     });
   }
 });
