@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="landing-page">
+      <header>
+        <div class="container">
+          <a href="#" class="logo"><b>addtoyourfamily.com</b></a>
+          <ul class="links">
+            <li>Home</li>
+            <li id="get-started-button">PetFinder</li>
+            <li>Pet Calculator</li>
+            <li>About</li>
+            <li id="get-started-button">Get Started</li>
+          </ul>
+        </div>
+      </header>
+    </div>
     <h1>Find Pets Near You</h1>
     <form id="search-form">
       <label for="location">Location:</label>
@@ -19,7 +33,7 @@
         <option value="Rabbit">Rabbit</option>
       </select>
 
-      <button type="submit">Search</button>
+      <button class="search-button" type="submit">Search</button>
     </form>
 
     <div id="results"></div>

@@ -20,7 +20,7 @@ async function fetchAndDisplayPets(location, animalType) {
   try {
     const accessToken = await fetchAccessToken();
     const response = await fetch(
-      `${url}?type=${animalType}&location=${location}&limit=20`,
+      `${url}?type=${animalType}&location=${location}&limit=10`,
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
