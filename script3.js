@@ -34,7 +34,7 @@ calculateButton.addEventListener("click", () => {
     petExpenses = 77 || 233;
     petBudget = 0;
     picture.src = "images/Medium-dog.jpg";
-  } else if (petBreed == "German Shepard") {
+  } else if (petBreed == "German Shepherd") {
     petExpenses = 93 || 314;
     petBudget = 0;
     picture.src = "images/Large-dog.jpg";
