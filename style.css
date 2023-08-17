@@ -9,7 +9,7 @@ body {
   background-image: url("https://static.vecteezy.com/system/resources/previews/003/031/764/original/blue-wide-background-with-linear-blurred-gradient-free-vector.jpg");
   backdrop-filter: blur(10px);
   background-size: cover;
-  color: #333; /* Darker text color */
+  color: #333;
 }
 
 a {
@@ -74,7 +74,7 @@ ul {
 }
 
 .landing-page header .logo {
-  color: rgba(255, 255, 255, 0.8); /* Darker text color */
+  color: rgba(255, 255, 255, 0.8);
   font-style: bold;
   text-transform: uppercase;
   font-size: 20px;
@@ -101,7 +101,7 @@ ul {
 
 .landing-page header .links li {
   margin-left: 30px;
-  color: rgba(255, 255, 255, 0.8); /* Darker text color */
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -148,7 +148,7 @@ ul {
 }
 
 .landing-page .content .info h1 {
-  color: rgba(255, 255, 255, 0.8); /* Darker text color */
+  color: rgba(255, 255, 255, 0.8);
   font-size: 44px;
 }
 
@@ -156,7 +156,7 @@ ul {
   margin: 0;
   line-height: 1.6;
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.8); /* Darker text color */
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .landing-page .content .info button {

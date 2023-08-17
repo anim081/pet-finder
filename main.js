@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (getStartedButton) {
     getStartedButton.addEventListener("click", () => {
-      // Redirect to the petfinder.html page
-      window.location.href = "/pages/petfinder/findapet.html";
+      window.location.href = "pages/petfinder/findapet.html";
     });
   }
 });
