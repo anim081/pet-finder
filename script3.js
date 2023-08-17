@@ -29,15 +29,15 @@ calculateButton.addEventListener("click", () => {
   if (petBreed == "Pug") {
     petExpenses = 62 || 221;
     petBudget = 0;
-    picture.src = "images/Small-dog.png";
+    picture.src = "images/Small-dog.jpg";
   } else if (petBreed == "Border Collie") {
     petExpenses = 77 || 233;
     petBudget = 0;
-    picture.src = "images/Medium-dog.png";
+    picture.src = "images/Medium-dog.jpg";
   } else if (petBreed == "German Shepard") {
     petExpenses = 93 || 314;
     petBudget = 0;
-    picture.src = "images/Large-dog.png";
+    picture.src = "images/Large-dog.jpg";
   }
 
   // Calculate total budget

@@ -95,3 +95,13 @@ searchForm.addEventListener("submit", function (event) {
 
   fetchAndDisplayPets(location, animalType);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const getPetCalculator = document.getElementById("petcalculator");
+
+  if (getPetCalculator) {
+    getPetCalculator.addEventListener("click", () => {
+      window.location.href = "petcalculator.html";
+    });
+  }
+});

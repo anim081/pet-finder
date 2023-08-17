@@ -10,6 +10,7 @@ body {
   backdrop-filter: blur(10px);
   background-size: cover;
   color: #333;
+  scroll-behavior: smooth;
 }
 
 a {

@@ -29,3 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const getPetCalculator = document.getElementById("petcalculator");
+
+  if (getPetCalculator) {
+    getPetCalculator.addEventListener("click", () => {
+      window.location.href = "petcalculator.html";
+    });
+  }
+});
