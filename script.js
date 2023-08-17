@@ -20,7 +20,7 @@ async function fetchAndDisplayPets(location, animalType) {
   try {
     const accessToken = await fetchAccessToken();
     const response = await fetch(
-      `${url}?type=${animalType}&location=${location}&limit=10`,
+      `${url}?type=${animalType}&location=${location}&limit=20`,
       {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -35,27 +35,48 @@ async function fetchAndDisplayPets(location, animalType) {
     petListElement.innerHTML = "";
 
     pets.forEach((pet) => {
-      const petCard = document.createElement("div");
-      petCard.className = "pet-card";
+      if (pet.photos.length > 0) {
+        const petCard = document.createElement("div");
+        petCard.className = "pet-card";
 
-      petCard.innerHTML = `
-        <div class="pet-image">
-          <img src="${
-            pet.photos.length > 0 ? pet.photos[0].medium : ""
-          }" alt="${pet.name}">
-        </div>
-        <div class="pet-info">
-          <h2>${pet.name}</h2>
-          ${pet.description ? `<p>${pet.description}</p>` : ""}
-          <p>Type: ${pet.type}</p>
-          <p>Status: ${pet.status}</p>
-          <p>Size: ${pet.size}</p>
-          <p>Tags: ${pet.tags.join(", ")}</p>
-          <button class="adopt-button">Adopt Me</button>
-        </div>
-      `;
+        let petInfoHtml = `
+          <div class="pet-image">
+            <img src="${pet.photos[0].medium}" alt="${pet.name}">
+          </div>
+          <div class="pet-info">
+            <h2>${pet.name}</h2>
+        `;
 
-      petListElement.appendChild(petCard);
+        if (pet.description) {
+          petInfoHtml += `<p>${pet.description}</p>`;
+        }
+
+        if (pet.age) {
+          petInfoHtml += `<p>Age: ${pet.age}</p>`;
+        }
+
+        if (pet.breeds.primary) {
+          petInfoHtml += `<p>Breed: ${pet.breeds.primary}</p>`;
+        }
+
+        if (pet.status) {
+          petInfoHtml += `<p>Status: ${pet.status}</p>`;
+        }
+
+        if (pet.size) {
+          petInfoHtml += `<p>Size: ${pet.size}</p>`;
+        }
+
+        if (pet.tags && pet.tags.length > 0) {
+          petInfoHtml += `<p>Tags: ${pet.tags.join(", ")}</p>`;
+        }
+
+        petInfoHtml += `<button class="adopt-button">Adopt Me</button></div>`;
+
+        petCard.innerHTML = petInfoHtml;
+
+        petListElement.appendChild(petCard);
+      }
     });
   } catch (error) {
     console.error("Error fetching pets:", error);
